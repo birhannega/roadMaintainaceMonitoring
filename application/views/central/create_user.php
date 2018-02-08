@@ -58,4 +58,56 @@ if($this->session->flashdata('message')!=null)
         </form>
     </div>
 </div>
+    <div class="col-lg-6">
+
+        <div class="panel panel-danger">
+            <div class="panel-heading"> Close user account </div>
+               <div class="panel-body">
+                   <form action="" method="post" class="form-group">
+                       <div class="form-group">
+                           <label>Select user account to be closed </label>
+                           <select class="form-control" name="accountholder">
+                               <option value="-1">Select staff member to be closed</option>
+                           </select>
+                       </div>
+                       <div class="form-group">
+                           <p class="text-muted">please enter the reason why this account is to be closed</p>
+                           <textarea class="form-control" name="reason">
+
+                        </textarea>
+                       </div>
+
+                       <div class="form-group">
+                           <button class="btn btn-warning">Ban this account</button>
+                       </div>
+
+                   </form>
+               </div>
+        </div>
+        <div class="panel panel-warning">
+            <div class="panel-heading">  Ban/suspend user account </div>
+            <div class="panel-body">
+                <form action="" method="post" class="form-group">
+                    <div class="form-group">
+                        <label>Select user to be suspended</label>
+                        <select class="form-control" name="accountholder">
+                            <option value="-1">Select staff member to be suspended</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <p class="text-muted">please enter the reason why this account is to be suspended</p>
+                        <textarea class="form-control" name="reason">
+
+                        </textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <button class="btn btn-warning">Ban this account</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
 </div>

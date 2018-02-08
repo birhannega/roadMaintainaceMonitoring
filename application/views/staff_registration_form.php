@@ -7,13 +7,10 @@ if($this->session->flashdata('message')!=null)
 }
 ?>
 
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#myModal">
-Add new Employee
-</button>
+
 
 <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="staffregmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -22,7 +19,7 @@ Add new Employee
       </div>
       <div class="modal-body">
        <div class="form-group">
-           <form class="form-group" action="<?php echo base_url('index.php/central/do_regiister');?>" method="post">
+           <form class="form-group" action="<?php echo base_url('index.php/central/do_register');?>" method="post">
                <div class="form-group">
                    <label>First Name</label>
                    <input class="form-control" name="FirstName" type="text" />
@@ -81,6 +78,10 @@ Add new Employee
                 <tr>
                     <th colspan="7" class=" active">
                         List of currently registered Employees
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#staffregmodal">
+                                New Employee
+                        </button>
                     </th>
                 </tr>
                 <tr>
