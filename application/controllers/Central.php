@@ -15,7 +15,10 @@
  	// list of rgistered road assets in all districts
  	function ListAllroads()
 	{
-		echo "all roads in addis ababa";
+        $this->load->view("header");
+        $this->load->view("central/nav");
+        $this->load->view("ListOfRoads");
+        $this->load->view("footer");
 	}
 	//list of production plant sites 
 	function production()
@@ -92,8 +95,10 @@
 	// resign employee
 	function resignEmployee()
 	{
-		echo "hire employee";
-		//todo resign employee
+        $this->load->view('header');
+        $this->load->view('central/nav');
+        $this->load->view('resign');
+        $this->load->view('footer');
 	}
 
     /**
@@ -246,7 +251,7 @@
     /**
      *do registration of staff info into database
      */
-    function do_regiister()
+    function do_register()
     {
          //loading model class
        $this->load->Model("staff_model");
