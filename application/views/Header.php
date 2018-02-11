@@ -4,6 +4,7 @@
 	<title>Home-district-admin</title>
 	<link rel="stylesheet" type="text/css" href="<?php echo(base_url('/resources/bootstrap/css/bootstrap.css')) ?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo(base_url('/resources/bootstrap/css/fontawesome.css')) ?>">
+    <script type="text/javascript" src="<?php echo(base_url('/resources/jquery/jquery-1.10.2.min.js')) ?>"></script>
 </head>
 <body>
 <div class="row" style="margin-top:2px">

@@ -1,3 +1,10 @@
+<?php
+if($this->session->userdata('district')==null)
+{
+    redirect(base_url());
+}
+?>
+
 <div class="row" style="margin-top:-18px">
   <nav class="navbar navbar-default">
   <div class="container">
@@ -21,8 +28,8 @@
                         aria-expanded="false">  Inventry management <span class="caret"></span></a>
           <ul class="dropdown-menu">
            
-            <li><a href="#">Register new Road asset</a></li>
-            <li><a href="#">Road Segment Management</a></li>
+            <li><a href="<?php echo base_url('index.php/district/Register_road');?>">  Register new Road asset</a></li>
+              <li><a href="<?php echo base_url('index.php/district/AddSegment');?>">  Road Segment Management</a></li>
             <li><a href="#">View road assets</a></li>
              <li><a href="#">View Maintainance History</a></li>
           </ul>

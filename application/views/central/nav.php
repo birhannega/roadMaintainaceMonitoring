@@ -1,3 +1,11 @@
+<?php
+if($this->session->userdata("central")==null)
+{
+    redirect(base_url());
+}else
+{
+?>
+
 <div class="container-fluid" style="margin-top:-18px">
   <nav class="navbar navbar-default">
   <div class="container">
@@ -81,7 +89,7 @@
       <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" 
-          aria-haspopup="true" aria-expanded="false"> My Account<span class="caret"></span></a>
+          aria-haspopup="true" aria-expanded="false"> Welcome <?php echo $this->session->userdata('user');?> <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a  href="<?php echo base_url("index.php/central/myprofile"); ?>">My profile</a></li>
                <li><a href="<?php echo base_url("index.php/central/changepassword"); ?>">Change Password</a></li>
@@ -95,3 +103,6 @@
   </div><!-- /.container-fluid -->
 </nav>
 </div>
+<?php
+}
+?>

@@ -18,9 +18,16 @@ class Welcome extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index()
+
+
+    public function index()
 	{
-		$this->load->view('Login');
+     //   $title="Login form";
+        $this->load->helper('form');
+        $this->load->library('form_validation');
+
+        $data['title'] = 'Login panel';
+		$this->load->view('Login',$data);
 	}
 	public function codeigniterDetail()
 	{

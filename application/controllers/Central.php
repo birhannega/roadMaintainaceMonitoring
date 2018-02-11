@@ -1,15 +1,21 @@
 
-<?php 
+<?php
+
 /**
- * central administrators pages 
+ * central administrators pages
+ * @property  Staff_model
+ * @property  session
+ * @property  Staff_model
+ * @property  staff_model
  */
  class Central extends CI_controller
  {
  	//index page of central admin 
- 	function index()
+ 	function index(	)
  	{
  		$this->load->view("header");
- 		$this->load->view("central/nav.php");
+ 		$this->load->view("central/nav");
+        $this->load->view("central/basic_reports");
  		$this->load->view("footer");
  	}
  	// list of rgistered road assets in all districts
@@ -153,7 +159,11 @@
      */
     function Logout()
 	{
-		echo " log out ";
+		/** @var $session $this */
+        $this->session->unset_userdata('central');
+        $this->session->unset_userdata('role');
+        $this->session->unset_userdata('district');
+		redirect(base_url());
 	}
 	 // change password
 	function changePassword()
@@ -289,10 +299,6 @@
                redirect(base_url('index.php/central/hireEmployee'));// redirect to employee form
        }
     }
-
-
-
-//todo  adding page for the links
 
  } 
  ?>
