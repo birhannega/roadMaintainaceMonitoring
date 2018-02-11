@@ -1,5 +1,5 @@
 <?php
-if($this->session->userdata('district')==null)
+if($this->session->userdata('district')==null && $this->session->userdata('role')==null)
 {
     redirect(base_url());
 }

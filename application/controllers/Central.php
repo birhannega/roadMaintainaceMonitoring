@@ -15,7 +15,11 @@
  	{
  		$this->load->view("header");
  		$this->load->view("central/nav");
-        $this->load->view("central/basic_reports");
+ 		// Get road list
+        $this->load->Model('Road_model');
+        $roadInfo['roads']=$this->Road_model-> get_road_info();
+
+        $this->load->view("central/basic_reports",$roadInfo);
  		$this->load->view("footer");
  	}
  	// list of rgistered road assets in all districts

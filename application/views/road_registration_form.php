@@ -10,7 +10,7 @@
         }
         ?>
     </strong>
-    <form class="form-group" method="post" action="<?php echo base_url('index.php/District/do_Add_road')?>" >
+    <form   class="form-group" method="post" action="<?php echo base_url('index.php/District/do_Add_road')?>" >
         <div class="form-group col-sm-4">
             <label class="text-muted" for="roadnumber">road_number</label class="text-muted">
             <input type="number" class="form-control" id="roadnumber" name="roadnumber" />
@@ -101,87 +101,13 @@
 <!--<button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#myModal">
   Register new road
 </button>-->
+
+
 </div>
     <div class="col-lg-12">
 
 <div class="table-responsive">
 <h4 class="text-capitalize  text-muted">Addis ababa city administration/District road assets</h4>
-
-
-<!-- Button trigger modal -->
-
-
-<!-- Modal -->
-<!--<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-label class="text-muted"ledby="myModallabel class="text-muted"">-->
-<!--  <div class="modal-dialog" role="document">-->
-<!--    <div class="modal-content">-->
-<!--      <div class="modal-header">-->
-<!--        <button type="button" class="close" data-dismiss="modal" aria-label class="text-muted"="Close"><span aria-hidden="true">&times;</span></button>-->
-<!--        <h4 class="modal-title" id="myModallabel class="text-muted"">Register new road</h4>-->
-<!--      </div>-->
-<!--      <div class="modal-body">-->
-<!--        <form class="form-group" method="POST" action="">-->
-<!---->
-<!--        <div class="form-group">-->
-<!--        <label class="text-muted">District</label class="text-muted">-->
-<!--        <input class="form-control" name="district" />-->
-<!--       </div>-->
-<!--       -->
-<!--        <div class="form-group">-->
-<!--        <label class="text-muted">Road number</label class="text-muted">-->
-<!--        <input class="form-control" name="rnumber" />-->
-<!--       </div>-->
-<!---->
-<!--        <div class="form-group">-->
-<!--        <label class="text-muted">Road name</label class="text-muted">-->
-<!--        <input class="form-control" name="rname" />-->
-<!--       </div>-->
-<!--        <div class="form-group">-->
-<!--        <label class="text-muted">start Address</label class="text-muted">-->
-<!--        <input class="form-control" name="startPoint" />-->
-<!--       </div>-->
-<!---->
-<!--           <div class="form-group">-->
-<!--        <label class="text-muted">End address</label class="text-muted">-->
-<!--        <input class="form-control" name="endpoint" />-->
-<!--       </div>-->
-<!---->
-<!--       -->
-<!--        <div class="form-group">-->
-<!--        <label class="text-muted">District</label class="text-muted">-->
-<!--        <input class="form-control" name="district" />-->
-<!--       </div>-->
-<!--       -->
-<!--        <div class="form-group">-->
-<!--        <label class="text-muted">Road number</label class="text-muted">-->
-<!--        <input class="form-control" name="rnumber" />-->
-<!--       </div>-->
-<!---->
-<!--        <div class="form-group">-->
-<!--        <label class="text-muted">Road name</label class="text-muted">-->
-<!--        <input class="form-control" name="rname" />-->
-<!--       </div>-->
-<!--        <div class="form-group">-->
-<!--        <label class="text-muted">start Address</label class="text-muted">-->
-<!--        <input class="form-control" name="startPoint" />-->
-<!--       </div>-->
-<!---->
-<!--           <div class="form-group">-->
-<!--        <label class="text-muted">End address</label class="text-muted">-->
-<!--        <input class="form-control" name="endpoint" />-->
-<!--       </div>-->
-<!--        </form>-->
-<!--      </div>-->
-<!--      <div class="modal-footer">-->
-<!--        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
-<!--        <button type="button" class="btn btn-primary">Save changes</button>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</div>-->
-
-
-
         <table class="table table-striped">
             <thead>
             <th>#</th>

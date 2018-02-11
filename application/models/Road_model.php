@@ -35,4 +35,9 @@
                 $query=$this->db->get('tbl_road_asset');
                 return $query->result();
             }
+            public function get_road_info()
+            {
+                $query=$this->db->get('tbl_road_asset');
+                return $query->result();
+            }
 }

@@ -10,7 +10,7 @@
     <div class="col-lg-12">
 
 
-                <table class="table table-bordered table-striped ">
+                <table class="table  table-condensed ">
                     <thead>
                     <th colspan="10" class="bg-info">report of registered road assets by districts</th>
                     </thead>
@@ -27,6 +27,25 @@
                     <th></th>
                     <th></th>
                     </thead>
+                    <tbody>
+                    <?php
+                    $roacounter=1;
+                  foreach ($roads as $roadInfo)
+                  {
+                       echo "<tr>
+                            <td>.$roacounter.</td> 
+                            <td>.$roadInfo->road_number.</td>
+                            <td>.$roadInfo->road_name.</td>
+                            <td>.</td>
+                            <td>.$roadInfo->measured_Length.</td>
+                            <td>.$roadInfo->start_chainage.</td>
+                              <td>.$roadInfo->End_chainage.</td>
+                              <td>.$roadInfo->End_chainage.</td>
+                              </tr>";
+                      $roacounter++;
+                  }
+                    ?>
+                    </tbody>
                 </table>
 
     </div>
