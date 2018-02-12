@@ -10,9 +10,9 @@
     <div class="col-lg-12">
 
 
-                <table class="table  table-condensed ">
+                    <table class="table  table-condensed table-bordered ">
                     <thead>
-                    <th colspan="10" class="bg-info">report of registered road assets by districts</th>
+                    <th colspan="11" class="text-center text-capitalize text-info"> List of registered road assets </th>
                     </thead>
 
                     <thead>
@@ -24,8 +24,8 @@
                     <th>Start point</th>
                     <th>End point</th>
                     <th># of segments</th>
-                    <th></th>
-                    <th></th>
+                    <th  colspan="3">Actions</th>
+
                     </thead>
                     <tbody>
                     <?php
@@ -39,9 +39,12 @@
                             <td>.</td>
                             <td>.$roadInfo->measured_Length.</td>
                             <td>.$roadInfo->start_chainage.</td>
-                              <td>.$roadInfo->End_chainage.</td>
-                              <td>.$roadInfo->End_chainage.</td>
-                              </tr>";
+                            <td>.$roadInfo->End_chainage.</td>
+                            <td>.$roadInfo->End_chainage.</td>
+                              <td><button class='btn btn-sm btn-primary'><span class='glyphicon glyphicon-eye-open'></span> </button></td>
+                                <td><button class='btn btn-sm btn-danger'><span class='glyphicon glyphicon-trash'></span></button></td>
+                                <td><button class='btn btn-sm btn-warning'><span class='glyphicon glyphicon-edit'></span></button></td>
+                            </tr>";
                       $roacounter++;
                   }
                     ?>

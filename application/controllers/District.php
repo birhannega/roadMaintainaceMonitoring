@@ -75,7 +75,11 @@ class District extends CI_controller
      * register new member
      */
     public function register_staff_member(){
-        echo "register";
+        //echo "register";
+        $this->load->view('header');
+        $this->load->view('navigationbar');
+        $this->load->view('District/district_Staff_reg_form');
+        $this->load->view('footer');
 
     }
 

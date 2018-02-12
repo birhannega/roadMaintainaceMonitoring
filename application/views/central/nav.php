@@ -45,7 +45,7 @@ if($this->session->userdata("central")==null &&$this->session->userdata("role")=
               <li><a href="<?php echo base_url("index.php/central/Employeeprofile"); ?>">view Active Members</a></li>
             <li><a href="<?php echo base_url("index.php/central/resignEmployee"); ?>">Resign Member</a></li>
               <li><a href="<?php echo base_url("index.php/central/AddUser"); ?>">create user account</a></li>
-            <li><a hhref="<?php echo base_url("index.php/central/employeeReport"); ?>">Staff report</a></li>
+            <li><a href="<?php echo base_url("index.php/central/employeeReport"); ?>">Staff report</a></li>
           
           </ul>
         </li>

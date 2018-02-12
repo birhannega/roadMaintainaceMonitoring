@@ -53,15 +53,13 @@ if($this->session->userdata('district')==null && $this->session->userdata('role'
            <li><a href="#">Assign resource to Projects</a></li>
             <li><a href="#">Inspect resource Allocation</a></li>
              <li><a href="#">View Allocation History</a></li>
-             
-           
           </ul>
         </li>
          <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" 
           aria-haspopup="true" aria-expanded="false"> Staff Management<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Register new Member</a></li>
+            <li><a href="<?php echo base_url('index.php/District/register_staff_member')?>">Register new Member</a></li>
                <li><a href="#">view Active Members</a></li>
             <li><a href="#">Resign Member</a></li>
             <li><a href="#">Staff report</a></li>

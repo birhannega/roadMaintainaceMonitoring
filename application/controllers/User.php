@@ -10,6 +10,7 @@ class User extends CI_Controller
 {
     /**
      *User authentication
+     * in
      */
     public function Authenticate_user()
     {
@@ -35,6 +36,7 @@ class User extends CI_Controller
            {
                //user is valid get roles
                $role=$this->User_model->get_user_role($username);
+
                foreach ($role as $row)
                {
                    $user_role=$row->Role_ID;

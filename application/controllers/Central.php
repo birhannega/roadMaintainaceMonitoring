@@ -27,7 +27,10 @@
 	{
         $this->load->view("header");
         $this->load->view("central/nav");
-        $this->load->view("ListOfRoads");
+        // Get road list
+        $this->load->Model('Road_model');
+        $roadInfo['roads']=$this->Road_model-> get_road_info();
+        $this->load->view("ListOfRoads",$roadInfo);
         $this->load->view("footer");
 	}
 	//list of production plant sites 
@@ -48,11 +51,15 @@
 	//  ===============================
 	// maintainance report  functions
 	// ==========================================
-
-    // list of onging projects
-	function ongoingprojects()
+     /**
+      *list of onging projects
+      */
+     function ongoingprojects()
 	{
-		echo " ongoing projects  in addis ababa";
+        $this->load->view('header');
+        $this->load->view('central/nav');
+        $this->load->view('central/ongoing_Maintainance_projects');
+        $this->load->view('footer');
 	}
 	 // list of delayed projects
 	function Delayedprojects()
@@ -133,9 +140,16 @@
 	{
 		echo "lsit active employee";
 	}
-	function employeeReport()
+
+    /**
+     *Employee report
+     */
+    function employeeReport()
 	{
-		echo " employee reports";
+	$this->load->view('header');
+        $this->load->view('central/nav');
+        $this->load->view('central/staff_report');
+        $this->load->view('footer');
 	}
     //=========================================
     //      Logged user account management
