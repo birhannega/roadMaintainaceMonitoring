@@ -80,20 +80,35 @@
 	// resources report  functions
 	// ==========================================
 
-	// budget management
-	function budget()
+
+     /**
+      * budget management
+      */
+     function budget()
 	{
-		echo " Budget for projects  in addis ababa";
+		$this->load->view('header');
+        $this->load->view('central/nav');
+        $this->load->view('central/budgetplan');
+		$this->load->view('footer');
 	}
-	// budget management
-	function Machineries()
+
+     /**
+      * budget management
+      */
+     function Machineries()
 	{
-		echo " machinery for projects  in addis ababa";
+        $this->load->view('header');
+        $this->load->view('central/nav');
+        $this->load->view('central/machinery_report');
+        $this->load->view('footer');
 	}
 // construction materials
 	function Materials()
 	{
-		echo " materials used  for projects  in addis ababa";
+        $this->load->view('header');
+        $this->load->view('central/nav');
+        $this->load->view('central/material_report');
+        $this->load->view('footer');
 	}
 	// hire new employee
 	function hireEmployee()
