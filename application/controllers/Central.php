@@ -36,17 +36,26 @@
 	//list of production plant sites 
 	function production()
 	{
-		echo "all production plants in addis ababa";
+        $this->load->view('header');
+        $this->load->view('central/nav');
+        $this->load->view('central/productions');
+        $this->load->view('footer');
 	}
 	//list of laboratories sites 
 	function laboratories()
 	{
-		echo "all laboratories  in addis ababa";
+        $this->load->view('header');
+        $this->load->view('central/nav');
+        $this->load->view('central/labratories');
+        $this->load->view('footer');
 	}	
 	//list of machinery resources  
 	function Machinery()
 	{
-		echo " Machinery  in addis ababa";
+        $this->load->view('header');
+        $this->load->view('central/nav');
+        $this->load->view('central/machineries');
+        $this->load->view('footer');
 	}	
 	//  ===============================
 	// maintainance report  functions
@@ -64,17 +73,26 @@
 	 // list of delayed projects
 	function Delayedprojects()
 	{
-		echo "  Delayed  in addis ababa";
+        $this->load->view('header');
+        $this->load->view('central/nav');
+        $this->load->view('central/delayed');
+        $this->load->view('footer');
 	}
 	// list of finished projects
 	function finishedprojects()
 	{
-		echo " Machinery  in addis ababa";
+        $this->load->view('header');
+        $this->load->view('central/nav');
+        $this->load->view('central/finished');
+        $this->load->view('footer');
 	}// list of suspended projects
 
 	function suspendedprojects()
 	{
-		echo " suspended projects  in addis ababa";
+        $this->load->view('header');
+        $this->load->view('central/nav');
+        $this->load->view('central/suspended');
+        $this->load->view('footer');
 	}
 	//  ===============================
 	// resources report  functions
@@ -201,12 +219,19 @@
 	 // change password
 	function changePassword()
 	{
-		echo " change pasword ";
+		$this->load->view('header');
+        $this->load->view('central/nav');
+        $this->load->view('central/changepassword');
+        $this->load->view('footer');
+
 	}
 	// my profile
 	function myprofile()
 	{
-		echo " my profile ";
+        $this->load->view('header');
+        $this->load->view('central/nav');
+        $this->load->view('central/myprofile');
+        $this->load->view('footer');
 	}
 
     /**
