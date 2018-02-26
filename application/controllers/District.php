@@ -36,7 +36,7 @@ class District extends CI_controller
 
     }
     /**
-     *Add road segmenent function
+     *generate road segmenent registration form
      */
     public function AddSegment()
     {
@@ -44,6 +44,15 @@ class District extends CI_controller
         $this->load->view("navigationbar");
         $this->load->view("district/Addsegment");
         $this->load->view("footer");
+    }
+
+    /**
+     *do registration of segments
+     */
+    public function do_segment_registration()
+    {
+      $roadnumber=$_POST['roadnumber'];
+echo $roadnumber;
 
     }
 

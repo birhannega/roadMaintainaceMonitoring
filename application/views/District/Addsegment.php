@@ -11,14 +11,56 @@
     <div class="col-lg-6">
         <h4 class="text-muted">Segment management</h4>
         <div class="form-group">
-            <form class="form-inline">
+            <form class="form-inline" method="get" >
                 <div class="form-group">
                     <label>Enter road number</label>
-                    <input type="text" class="form-control" placeholder="Enter road number">
-                    <input class="btn btn-info" type="submit">
+                    <select class="form-control" placeholder="Enter road number" id="roadnumber" required onchange="showform()">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+
                 </div>
 
             </form>
+        </div>
+        <div id="editform">
+
+             <?php
+
+             $form_attrib = array(
+                 'Method'        => 'post',
+                 'id'          => 'addsegmentform',
+                 'class'       => 'form-group'
+
+             );
+             echo form_open('District/do_segment_registration',$form_attrib);
+             ?>
+             <div class="form-group ">
+                 <label>road number</label>
+                 <input class="form-control" name="roadnumber" id="roadID" readonly="readonly">
+             </div>
+            <div class="form-group ">
+                <label>Enter name of segment</label>
+                <input class="form-control"name="segment"  >
+            </div>
+            <div class="form-group ">
+                <label>Enter Starting point</label>
+                <input class="form-control"name="segmentstart"  >
+            </div>
+            <div class="form-group ">
+                <label>Enter End point</label>
+                <input class="form-control"name="segmentend"  >
+            </div>
+            <div class="form-group ">
+                <label>segment Description</label>
+                <input class="form-control"name="segmentDescription"  >
+            </div>
+            <div class="form-group ">
+
+                <input type="submit" class="btn btn-primary" value="Add segment"  >
+            </div>
+         </form>
         </div>
     </div>
     <div class="col-lg-6">
@@ -52,6 +94,18 @@
 
 <script>
     $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-    })
+        $('[data-toggle="tooltip"]').tooltip();
+        $('#addsegmentform').css('visibility','hidden');
+
+    });
+    function showform()
+    {
+        $('#addsegmentform').css('visibility','visible');
+        var roadnumber=document.getElementById('roadnumber').value;
+        var editdiv=document.getElementById('editform');
+        document.getElementById('roadID').value = roadnumber;
+        //roadnumberInput.value(roadnumber);roadID
+
+    }
+
 </script>

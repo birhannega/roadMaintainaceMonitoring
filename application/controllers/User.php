@@ -36,7 +36,8 @@ class User extends CI_Controller
            {
                //user is valid get roles
                $role=$this->User_model->get_user_role($username);
-
+               if($role)
+                 {
                foreach ($role as $row)
                {
                    $user_role=$row->Role_ID;
@@ -54,7 +55,16 @@ class User extends CI_Controller
                            $this->session->set_userdata('user', $username);// set session for user name of logged user
                            redirect(base_url('index.php/District'));
                        }
+                       case 3:{
+                         $this->session->set_userdata('Production', $user_role);// set session for role of logged user
+                           $this->session->set_userdata('user', $username);// set session for user name of logged user
+                           redirect(base_url('index.php/Production'));
+                    
+                            }
+
                    }
+               }}else{
+                echo "undefined role";
                }
 
            }else{

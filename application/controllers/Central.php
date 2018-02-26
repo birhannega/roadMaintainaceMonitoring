@@ -216,8 +216,11 @@
         $this->session->unset_userdata('district');
 		redirect(base_url());
 	}
-	 // change password
-	function changePassword()
+
+    /**
+     *change password
+     */
+    function changePassword()
 	{
 		$this->load->view('header');
         $this->load->view('central/nav');
