@@ -40,4 +40,10 @@
                 $query=$this->db->get('tbl_road_asset');
                 return $query->result();
             }
+            public function delete($id)
+            {
+                $this->db->where('road_number',$id);
+               $query= $this->db->delete('tbl_road_asset');
+             return $query->result();
+            }
 }

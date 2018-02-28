@@ -109,7 +109,14 @@
         $this->load->view('central/budgetplan');
 		$this->load->view('footer');
 	}
+	function delete($id)
+    {
+     //echo id;
+        $this->load->model('Road_model');
+        $deleted=$this->Road_model->delete($id);
 
+
+    }
      /**
       * budget management
       */

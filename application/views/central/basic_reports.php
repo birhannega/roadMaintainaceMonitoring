@@ -41,9 +41,15 @@
                             <td>.$roadInfo->start_chainage.</td>
                             <td>.$roadInfo->End_chainage.</td>
                             <td>.$roadInfo->End_chainage.</td>
-                              <td><button class='btn btn-sm btn-primary'><span class='glyphicon glyphicon-eye-open'></span> </button></td>
-                                <td><button class='btn btn-sm btn-danger'><span class='glyphicon glyphicon-trash'></span></button></td>
-                                <td><button class='btn btn-sm btn-warning'><span class='glyphicon glyphicon-edit'></span></button></td>
+                              <td>
+                                 <button onclick='viewdata($roadInfo->road_number)' class='btn btn-sm btn-primary' id='btnview'> <span class='glyphicon glyphicon-eye-open'></span> </button>
+                              </td>
+                                <td>
+                                      <button onclick='editdata($roadInfo->road_number)' id='btnedit' class='btn btn-sm btn-warning' > <span class='glyphicon glyphicon-pencil'></span></button> 
+                                </td>
+                                <td>
+                              <button onclick='deletedata($roadInfo->road_number)' id='btndel' class='btn btn-sm btn-danger' > <span class='glyphicon glyphicon-trash'></span> </button> 
+                                </td>
                             </tr>";
                       $roacounter++;
                   }
@@ -105,3 +111,31 @@
 
 
 </div>
+<script>
+
+    function viewdata(id) {
+        alert(id);
+
+    }
+    function editdata(id) {
+     //alert("edi");
+
+        alert(id);
+
+    }
+    function deletedata(id) {
+        //  var url="<?php //echo base_url();?>///index.php/central/delete?id="+id;
+        //console.log(url);
+        $.ajax({
+            type:'ajax',
+            method:"GET",
+            datatype:'String',
+            async:'false',
+
+            url: "<?php echo base_url()?>index.php/central/delete/"+id,
+              success: function(response){
+                alert('done');
+            }});
+
+    }
+</script>
